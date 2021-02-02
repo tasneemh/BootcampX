@@ -6,3 +6,12 @@ WHERE end_date IS NULL
 GROUP BY student
 HAVING avg(assignment_submissions.duration) < avg(assignments.duration)
 ORDER BY average_assignment_duration;
+
+SELECT avg(total_students) as average_students
+FROM(
+  SELECT count(students) as total_students
+  FROM students
+  JOIN cohorts on cohorts.id = cohort_id
+  GROUP BY cohorts
+  ) as totals_table;
+    
