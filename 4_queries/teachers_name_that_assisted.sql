@@ -9,4 +9,7 @@ GROUP BY teachers.name, cohorts.name
 ORDER BY teacher;
 
 
-SELECT count(*) FROM assistance_requests;
+
+
+
+
